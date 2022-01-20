@@ -15,12 +15,16 @@ function signe(nombre) {
 }
 console.log(signe(0))
 
-    /**
-     * Programmer une fonction prenant en argument un tableau de nombres, et qui renvoie un tableau ne contenant que les nombres pairs.
-     * Astuce : un nombre pair est un nombre dont le reste de la division par 2 est 0.
-     */
-    function nombresPairs(nombres) {
-nombrePairs["18", "43", "51", "32", "85"]
-
-si n % 2 = 0 return 
+/**
+ * Programmer une fonction prenant en argument un tableau de nombres, et qui renvoie un tableau ne contenant que les nombres pairs.
+ * Astuce : un nombre pair est un nombre dont le reste de la division par 2 est 0.
+ */
+function nombresPairs(nombres) {
+    let table = [18, 43, 51, 32, 85];
+    let tablePairs = [];
+    for (nombres = 0; nombres < table.length; nombres++);
+    if (nombres % 2 === 0) {
+        return (tablePairs = [nombres]);
     }
+    console.log(nombresPairs[18, 43, 51, 32])
+}
