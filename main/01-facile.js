@@ -24,7 +24,7 @@ function nombresPairs(nombres) {
     let tablePairs = [];
     for (nombres = 0; nombres < table.length; nombres++);
     if (nombres % 2 === 0) {
-        return (tablePairs = [nombres]);
+        return (tablePairs[nombres]);
     }
-    console.log(nombresPairs[18, 43, 51, 32])
 }
+console.log(tablePairs)
