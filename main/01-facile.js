@@ -20,11 +20,15 @@ console.log(signe(0))
  * Astuce : un nombre pair est un nombre dont le reste de la division par 2 est 0.
  */
 function nombresPairs(nombres) {
-    let table = [18, 43, 51, 32, 85];
     let tablePairs = [];
-    for (nombres = 0; nombres < table.length; nombres++);
-    if (nombres % 2 === 0) {
-        return (tablePairs[nombres]);
-    }
-}
-console.log(tablePairs)
+        let tableBegin = 0;
+        for (let i = 0; i < nombres.length; i++) {
+          if (nombres[i] % 2 === 0) {
+            tablePairs[tableBegin] = nombres[i];
+            tableBegin++;
+          }
+        }
+        return tablePairs;
+      }
+      let tableauComplete = [8, 13, 16, 21, 26, 29, 32];
+      console.log(nombresPairs(tableauComplete));
