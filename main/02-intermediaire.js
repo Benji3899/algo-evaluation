@@ -25,9 +25,16 @@ console.log(combine(table1, table2));
  * Par exemple : rotate([1, 2, 3, 4, 5], 2) renverra [4, 5, 1, 2, 3] 
  */
 function rotate(tableau, offset) {
-
+    let newTable = [];
+    let count = offset;
+    for (let i = 0; i < tableau.length; i++) {
+        if (i + count >= tableau.length) count = -i;
+        newTable[i] = tableau[i + count];
+    }
+    return newTable;
 }
-
+let tableMix = [1, 2, 3, 4, 5];
+console.log(rotate(tableMix, 3));
 /**
  * Suite de Syracuse
  * 
@@ -40,5 +47,19 @@ function rotate(tableau, offset) {
  * Pour 1, la suite sera : [1, 4, 2, 1, 4, 2, 1, 4, 2, 1]
  */
 function syracuse(nombre) {
-
+    let nbrCourent = nombre;
+    let tableSyra = [];
+    tableSyra[0] = nbrCourent;
+    let i = 1;
+    while (i < 10) {
+        if (nbrCourent % 2 === 0) {
+            nbrCourent /= 2;
+        } else {
+            nbrCourent = nbrCourent * 3 + 1;
+        }
+        tableSyra[i] = nbrCourent;
+    }
+    return tableSyra;
 }
+let test = 14;
+console.log(syracuse(test));
