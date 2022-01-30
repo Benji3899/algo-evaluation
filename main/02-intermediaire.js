@@ -4,9 +4,20 @@
  * Exemple : [1, 2, 3] et ["apple", "orange", "banana"] renverra : [1, "apple", 2, "orange", 3, "banana"]
  */
 function combine(tableau1, tableau2) {
-
+let tableCombine = [];
+let i=0;
+if (table1.length !== table2.length)
+return
+while(i < table1.length){
+    tableCombine[i*2]=table1[i];
+    tableCombine[i*2+1]=table2[i];
+    i++;
 }
-
+return tableCombine;
+}
+let table1 = [1, 2, 3];
+let table2 = ["apple", "orange", "banana"];
+console.log(combine(table1,table2));
 /**
  * Programmer une fonction prenant en argument un tableau d'éléments et une valeur offset, et qui renvoie un tableau avec les valeurs du tableau en argument décalées de la valeur
  * de offset.

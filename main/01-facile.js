@@ -30,5 +30,5 @@ function nombresPairs(nombres) {
         }
         return tablePairs;
       }
-      let tableauComplete = [8, 13, 16, 21, 26, 29, 32];
-      console.log(nombresPairs(tableauComplete));
+      let tableComplet = [8, 13, 16, 21, 26, 29, 32];
+      console.log(nombresPairs(tableComplet));
