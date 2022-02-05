@@ -46,20 +46,21 @@ console.log(rotate(tableMix, 3));
  * Par exemple, pour 14, la suite sera : [14, 7, 22, 11, 34, 17, 52, 26, 13, 40]
  * Pour 1, la suite sera : [1, 4, 2, 1, 4, 2, 1, 4, 2, 1]
  */
-function syracuse(nombre) {
+ function syracuse(nombre) {
     let nbrCourent = nombre;
     let tableSyra = [];
     tableSyra[0] = nbrCourent;
     let i = 1;
     while (i < 10) {
-        if (nbrCourent % 2 === 0) {
-            nbrCourent /= 2;
-        } else {
-            nbrCourent = nbrCourent * 3 + 1;
-        }
-        tableSyra[i] = nbrCourent;
+      if (nbrCourent % 2 === 0) {
+        nbrCourent /= 2;
+      } else {
+        nbrCourent = nbrCourent * 3 + 1;
+      }
+      tableSyra[i] = nbrCourent;
+      i++;
     }
     return tableSyra;
-}
-let test = 14;
-console.log(syracuse(test));
+  }
+  var test = 1;
+  console.log(syracuse(test));
