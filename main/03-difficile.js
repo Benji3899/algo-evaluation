@@ -15,28 +15,29 @@
  * 
  */
  function mouvementsFou(ligne, colonne) {
+     let i;
+     let j;
      let newTable = [];
-     let i = 1;
-     for(i = 1; ligne+i <= 8; colonne+i <= 8) {
-         newTable.push([ligne+i, colonne+i])
-         i++;
+
+     for(i = ligne, j=colonne; i > 1 && j<8; i--, j++){
+         newTable.push([i-1,j+1]);
      } 
-     //i = 1;
-     for(i=1; ligne+i <= 8; colonne-i >= 1){
-        newTable.push([ligne+i, colonne+i])
-        i++;
-     }
-     for(i=1; ligne-i >= 1; colonne-i >= 1){
-         newTable.push([ligne+i, colonne+i])
-         i++;
-     }
-     for(i=1; ligne-i >= 1; colonne+i <= 8){
-         newTable.push([ligne+i, colonne+i])
-         i++;
+    
+     for(i = ligne, j=colonne; i<8 && j>1; i++, j--){
+        newTable.push([i+1,j-1]);
+    } 
+
+    for(i = ligne, j=colonne; i<8 && j>1; i++, j--){
+        newTable.push([i+1,j-1]);
+    } 
+
+    for(i = ligne, j=colonne; i<8 && j>1; i++, j--){
+        newTable.push([i+1,j-1]);
+    } 
      }
      return newTable
     }
-    console.log(mouvementsFou(6,6))
+    console.log(mouvementsFou(4,4))
     // return [
     //     [ligne - 1, colonne - 1],
     //     [ligne, colonne],
