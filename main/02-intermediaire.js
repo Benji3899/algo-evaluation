@@ -4,16 +4,16 @@
  * Exemple : [1, 2, 3] et ["apple", "orange", "banana"] renverra : [1, "apple", 2, "orange", 3, "banana"]
  */
 function combine(tableau1, tableau2) {
-    let tableCombine = [];
-    let i = 0;
-    if (table1.length !== table2.length)
-        return
-    while (i < table1.length) {
-        tableCombine[i * 2] = table1[i];
-        tableCombine[i * 2 + 1] = table2[i];
-        i++;
-    }
-    return tableCombine;
+  let tableCombine = [];
+  let i = 0;
+  if (table1.length !== table2.length)
+    return
+  while (i < table1.length) {
+    tableCombine[i * 2] = table1[i];
+    tableCombine[i * 2 + 1] = table2[i];
+    i++;
+  }
+  return tableCombine;
 }
 let table1 = [1, 2, 3];
 let table2 = ["apple", "orange", "banana"];
@@ -25,13 +25,13 @@ console.log(combine(table1, table2));
  * Par exemple : rotate([1, 2, 3, 4, 5], 2) renverra [4, 5, 1, 2, 3] 
  */
 function rotate(tableau, offset) {
-    let newTable = [];
-    let count = offset;
-    for (let i = 0; i < tableau.length; i++) {
-        if (i + count >= tableau.length) count = -i;
-        newTable[i] = tableau[i + count];
-    }
-    return newTable;
+  let newTable = [];
+  let count = offset;
+  for (let i = 0; i < tableau.length; i++) {
+    if (i + count >= tableau.length) count = -i;
+    newTable[i] = tableau[i + count];
+  }
+  return newTable;
 }
 let tableMix = [1, 2, 3, 4, 5];
 console.log(rotate(tableMix, 3));
@@ -46,21 +46,21 @@ console.log(rotate(tableMix, 3));
  * Par exemple, pour 14, la suite sera : [14, 7, 22, 11, 34, 17, 52, 26, 13, 40]
  * Pour 1, la suite sera : [1, 4, 2, 1, 4, 2, 1, 4, 2, 1]
  */
- function syracuse(nombre) {
-    let nbrCourent = nombre;
-    let tableSyra = [];
-    tableSyra[0] = nbrCourent;
-    let i = 1;
-    while (i < 10) {
-      if (nbrCourent % 2 === 0) {
-        nbrCourent /= 2;
-      } else {
-        nbrCourent = nbrCourent * 3 + 1;
-      }
-      tableSyra[i] = nbrCourent;
-      i++;
+function syracuse(nombre) {
+  let nbrCourent = nombre;
+  let tableSyra = [];
+  tableSyra[0] = nbrCourent;
+  let i = 1;
+  while (i < 10) {
+    if (nbrCourent % 2 === 0) {
+      nbrCourent /= 2;
+    } else {
+      nbrCourent = nbrCourent * 3 + 1;
     }
-    return tableSyra;
+    tableSyra[i] = nbrCourent;
+    i++;
   }
-  var test = 1;
-  console.log(syracuse(test));
+  return tableSyra;
+}
+var test = 1;
+console.log(syracuse(test));

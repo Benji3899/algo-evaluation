@@ -14,41 +14,41 @@
  * dire un tableau qui contiendra de petits tableaux qui sont les paires ligne-colonne.
  * 
  */
- function mouvementsFou(ligne, colonne) {
-     let l;
-     let c;
-     let newTable = [];
+function mouvementsFou(ligne, colonne) {
+    let l;
+    let c;
+    let newTable = [];
 
-     // l négatif, c positif
-     for(l=ligne, c=colonne; l > 1 && c<8; l--, c++){
-         newTable.push([l-1,c+1]);
-     } 
-    
-     for(l=ligne, c=colonne; l<8 && c>1; l++, c--){
-        newTable.push([l+1,c-1]);
-    } 
-
-    for(l=ligne, c=colonne; l<8 && c<8; l++, c++){
-        newTable.push([l+1,c+1]);
-    } 
-
-    for(l=ligne, c=colonne; l>1 && c>1; l--, c--){
-        newTable.push([l-1,c-1]);
-    } 
-    
-     return newTable
+    // ligne négative, colonne positive
+    for (l = ligne, c = colonne; l > 1 && c < 8; l--, c++) {
+        newTable.push([l - 1, c + 1]);
     }
-    console.log(mouvementsFou(4,4))
-    // return [
-    //     [ligne - 1, colonne - 1],
-    //     [ligne, colonne],
-    //     [ligne + 1, colonne + 1],
-    // ]
+    // ligne positive, colonne négative
+    for (l = ligne, c = colonne; l < 8 && c > 1; l++, c--) {
+        newTable.push([l + 1, c - 1]);
+    }
+    // ligne positive, colonne positive
+    for (l = ligne, c = colonne; l < 8 && c < 8; l++, c++) {
+        newTable.push([l + 1, c + 1]);
+    }
+    // ligne négative, colonne négative
+    for (l = ligne, c = colonne; l > 1 && c > 1; l--, c--) {
+        newTable.push([l - 1, c - 1]);
+    }
+
+    return newTable
+}
+console.log(mouvementsFou(4, 4))
+// return [
+//     [ligne - 1, colonne - 1],
+//     [ligne, colonne],
+//     [ligne + 1, colonne + 1],
+// ]
 
 /**
  * Ce log ne fait pas partie de l'exercice, ne vous en préoccupez donc pas, mais il vous aidera à afficher vos tests avec un joli formattage.
  */
- console.log(`Les movements d'un fou sont : ${mouvementsFou(4, 4).map(cell => `[${cell}]`)}`)
+console.log(`Les movements d'un fou sont : ${mouvementsFou(4, 4).map(cell => `[${cell}]`)}`)
 
 
 
@@ -73,19 +73,19 @@
  */
 function pyramide(hauteur) {
     let newTable = [];
-    for(let i=0; i < hauteur; i++){
-        let begin = i*2+1
-        let base = (hauteur-1)*2+1
-        let space = (base - begin)/2
+    for (let i = 0; i < hauteur; i++) {
+        let begin = i * 2 + 1
+        let base = (hauteur - 1) * 2 + 1
+        let space = (base - begin) / 2
 
         let str = ""
-        str +=' '.repeat(space)
-        str +='*'.repeat(begin)
-        str +=' '.repeat(space)
+        str += ' '.repeat(space)
+        str += '*'.repeat(begin)
+        str += ' '.repeat(space)
         newTable.push(str)
-        }
-        return newTable
     }
+    return newTable
+}
 //      return ["    *    ", "   ***   ", "  *****  ", " ******* ", "*********"]
 //  }
 
